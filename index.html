@@ -11,8 +11,10 @@
   <script src="https://unpkg.com/zone.js"></script>
   <script src="https://unpkg.com/single-spa/lib/umd/single-spa.min.js"></script>
   <script src="/home/dist/home/main.js"></script>
+  <script src="/app1/dist/home/main.js"></script>
   <script>
     singleSpa.registerApplication('home', window.home.default, location => true);
+    singleSpa.registerApplication('app1', window.home.default, location => true);
     singleSpa.start();
   </script>
 </body>
