@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "home": {
+    "app1": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "single-spa-angular:build",
           "options": {
-            "outputPath": "dist/home",
+            "outputPath": "dist/app1",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "home:build"
+            "browserTarget": "app1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "home:build:production"
+              "browserTarget": "app1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "home:build"
+            "browserTarget": "app1:build"
           }
         },
         "test": {
@@ -104,7 +104,7 @@
         "single-spa": {
           "builder": "single-spa-angular:build",
           "options": {
-            "outputPath": "dist/home",
+            "outputPath": "dist/app1",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -177,5 +177,5 @@
       }
     }
   },
-  "defaultProject": "home"
+  "defaultProject": "app1"
 }

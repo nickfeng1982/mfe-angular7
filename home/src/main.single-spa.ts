@@ -15,17 +15,19 @@ if (environment.production) {
 export default singleSpaAngular({
   mainModule: AppModule,
   angularPlatform: platformBrowserDynamic(),
-  template: '<app-root />',
-  Router,
-  ApplicationRef,
+  template: '<app-root/>',
   domElementGetter() {
-    let containerEl = document.getElementById('app-root');
+    let containerEl = document.getElementById('home');
     if (!containerEl) {
       containerEl = document.createElement('div');
-      containerEl.id = 'app-root';
+      containerEl.id = 'home';
       document.body.appendChild(containerEl);
     }
 
     return containerEl;
   },
 });
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+
