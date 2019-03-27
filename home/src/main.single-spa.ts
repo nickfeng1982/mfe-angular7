@@ -15,7 +15,7 @@ if (environment.production) {
 export default singleSpaAngular({
   mainModule: AppModule,
   angularPlatform: platformBrowserDynamic(),
-  template: '<app-root/>',
+  template: '<app-root />',
   domElementGetter() {
     let containerEl = document.getElementById('home');
     if (!containerEl) {
